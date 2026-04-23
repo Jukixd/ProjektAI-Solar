@@ -1,0 +1,9 @@
+<component name="libraryTable">
+  <library name="onnx-lib">
+    <CLASSES>
+      <root url="jar://$PROJECT_DIR$/lib/onnxruntime-1.17.1-javadoc.jar!/" />
+    </CLASSES>
+    <JAVADOC />
+    <SOURCES />
+  </library>
+</component>

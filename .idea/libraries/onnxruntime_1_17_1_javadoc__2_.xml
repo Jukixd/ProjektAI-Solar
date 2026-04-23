@@ -1,0 +1,10 @@
+<component name="libraryTable">
+  <library name="onnxruntime-1.17.1-javadoc (2)">
+    <CLASSES>
+      <root url="jar://$PROJECT_DIR$/src/onnxruntime-1.17.1-javadoc.jar!/" />
+    </CLASSES>
+    <JAVADOC />
+    <SOURCES />
+    <jarDirectory url="jar://$PROJECT_DIR$/src/onnxruntime-1.17.1-javadoc.jar!/" recursive="false" />
+  </library>
+</component>
