@@ -10,11 +10,13 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="145a54d1-772d-46f7-82cd-46de83d2ac70" name="Changes" comment="">
+      <change afterPath="$PROJECT_DIR$/src/SolarLogika.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/VysledekZpracovani.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Vlakyzpozd.jar" beforeDir="false" afterPath="$PROJECT_DIR$/SolarníAi.jar" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/solarni_model.onnx" beforeDir="false" afterPath="$PROJECT_DIR$/solarni_model.onnx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Scrapper.py" beforeDir="false" afterPath="$PROJECT_DIR$/Scrapper script/Scrapper.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/solarni_data_2026.csv" beforeDir="false" afterPath="$PROJECT_DIR$/data/solarni_data_2026.csv" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Main.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/SolarGUI.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/SolarGUI.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/SolarModel.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/SolarModel.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -68,10 +70,11 @@
       <recent name="C:\Users\tmadz\IdeaProjects\Vlakyzpozd\lib" />
     </key>
     <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\Users\tmadz\IdeaProjects\Vlakyzpozd\data" />
+      <recent name="C:\Users\tmadz\IdeaProjects\Vlakyzpozd\Scrapper script" />
       <recent name="C:\Users\tmadz\IdeaProjects\Vlakyzpozd\scrapper" />
       <recent name="C:\Users\tmadz\IdeaProjects\Vlakyzpozd" />
       <recent name="C:\Users\tmadz\IdeaProjects\Vlakyzpozd\out\production" />
-      <recent name="C:\Users\tmadz\IdeaProjects\Vlakyzpozd\src" />
     </key>
   </component>
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
