@@ -17,7 +17,7 @@ public class SolarGUI {
             UIManager.setLookAndFeel(UIManager.getSystemLookAndFeelClassName());
         } catch (Exception ignored) {}
 
-        frame = new JFrame("SolarSense AI - Výpočet výkonu");
+        frame = new JFrame("SolarSense AI");
         frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
         frame.setSize(400, 450);
         frame.setLayout(new BorderLayout());
@@ -35,12 +35,14 @@ public class SolarGUI {
         JTextField txtTlak = vytvorPole("", inputFont);
         JTextField txtOblacnost = vytvorPole("", inputFont);
         JTextField txtHodina = vytvorPole("", inputFont);
+        JTextField txtMesic = vytvorPole("", inputFont);
 
         mainPanel.add(vytvorLabel("Teplota (°C):", labelFont)); mainPanel.add(txtTeplota);
         mainPanel.add(vytvorLabel("Vlhkost (%):", labelFont)); mainPanel.add(txtVlhkost);
         mainPanel.add(vytvorLabel("Tlak (hPa):", labelFont)); mainPanel.add(txtTlak);
         mainPanel.add(vytvorLabel("Oblačnost (%):", labelFont)); mainPanel.add(txtOblacnost);
         mainPanel.add(vytvorLabel("Hodina (0-23):", labelFont)); mainPanel.add(txtHodina);
+        mainPanel.add(vytvorLabel("Měsíc (0-12):", labelFont)); mainPanel.add(txtMesic);
 
         JButton btnPredikuj = new JButton("VYPOČÍTAT VÝKON");
         btnPredikuj.setBackground(new Color(0, 102, 204));
@@ -62,6 +64,7 @@ public class SolarGUI {
                 float tl = Float.parseFloat(txtTlak.getText());
                 float o = Float.parseFloat(txtOblacnost.getText());
                 int h = Integer.parseInt(txtHodina.getText());
+                int m = Integer.parseInt(txtMesic.getText());
                 String chyba = "";
 
                 if (t < -50 || t > 60) chyba += "- Teplota musí být mezi -50 a 60 °C.\n";
@@ -69,13 +72,14 @@ public class SolarGUI {
                 if (tl < 800 || tl > 1100) chyba += "- Tlak musí být mezi 800 a 1100 hPa.\n";
                 if (o < 0 || o > 100) chyba += "- Oblačnost musí být mezi 0 a 100 %.\n";
                 if (h < 0 || h > 23) chyba += "- Hodina musí být mezi 0 a 23.\n";
+                if (m < 1 || m > 12) chyba += "- Měsíc: 1 až 12.\n";
                 if (!chyba.isEmpty()) {
                     JOptionPane.showMessageDialog(frame,
                             "Zadali jste hodnoty mimo reálný rozsah:\n\n" + chyba,
                             "Neplatná data", JOptionPane.WARNING_MESSAGE);
                     return;
                 }
-                String vysledek = model.predikuj(t, v, tl, o, h);
+                String vysledek = model.predikuj(t, v, tl, o, h,m);
                 String barva = vysledek.contains("Vysoká") ? "green" : (vysledek.contains("Střední") ? "orange" : "red");
                 lblVysledek.setText("<html><div style='text-align: center;'>Výkon: <b style='color:" + barva + ";'>" + vysledek + "</b></div></html>");
 

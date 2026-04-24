@@ -2,6 +2,8 @@ import ai.onnxruntime.OrtEnvironment;
 import ai.onnxruntime.OrtSession;
 import ai.onnxruntime.OnnxTensor;
 import java.util.Collections;
+import java.time.LocalDate;
+import java.time.Month;
 
 
 
@@ -12,13 +14,15 @@ public class SolarModel {
         this.cestaKModelu = cestaKModelu;
     }
 
-    public String predikuj(float teplota, float vlhkost, float tlak, float oblacnost, float hodina) {
+    public String predikuj(float teplota, float vlhkost, float tlak, float oblacnost, float hodina,float mesic) {
         try {
             OrtEnvironment env = OrtEnvironment.getEnvironment();
             OrtSession.SessionOptions opts = new OrtSession.SessionOptions();
             OrtSession session = env.createSession(this.cestaKModelu, opts);
 
-            float[][] vstupy = new float[][]{{teplota, vlhkost, tlak, oblacnost, hodina}};
+
+            float[][] vstupy = new float[][]{{teplota, vlhkost, tlak, oblacnost, hodina, mesic}};
+
             OnnxTensor tensor = OnnxTensor.createTensor(env, vstupy);
 
             OrtSession.Result vysledek = session.run(Collections.singletonMap("float_input", tensor));
